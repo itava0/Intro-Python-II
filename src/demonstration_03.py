@@ -12,3 +12,13 @@ Notes:
 
 
 def multiply_nums(nums):
+  mylist = [int(x) for x in nums.split(',')]
+  result = 1
+  for x in mylist:
+    result = result * x
+  return result
+
+print(multiply_nums("2, 3"))
+print(multiply_nums("1, 2, 3, 4"))
+print(multiply_nums("54, 75, 453, 0"))
+print(multiply_nums("10, -2"))
