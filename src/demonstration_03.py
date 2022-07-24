@@ -20,6 +20,8 @@ Notes:
 
 from functools import reduce 
 
+# multiply all values in the
+# list using lambda function and reduce()
 def multiply_nums(nums):
   return reduce((lambda x, y: x * y), [int(x) for x in nums.split(',')])
 
