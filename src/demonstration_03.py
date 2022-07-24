@@ -11,12 +11,17 @@ Notes:
 """
 
 
+# def multiply_nums(nums):
+#   mylist = [int(x) for x in nums.split(',')]
+#   result = 1
+#   for x in mylist:
+#     result = result * x
+#   return result
+
+from functools import reduce 
+
 def multiply_nums(nums):
-  mylist = [int(x) for x in nums.split(',')]
-  result = 1
-  for x in mylist:
-    result = result * x
-  return result
+  return reduce((lambda x, y: x * y), [int(x) for x in nums.split(',')])
 
 print(multiply_nums("2, 3"))
 print(multiply_nums("1, 2, 3, 4"))
