@@ -20,4 +20,8 @@ Notes:
 
 
 def emotify(txt):
-    # Your code here
+  return txt.replace('smile', ':D')
+
+
+
+print(emotify("Make me smile"))
