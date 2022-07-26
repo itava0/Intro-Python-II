@@ -20,8 +20,19 @@ Notes:
 
 
 def emotify(txt):
-  return txt.replace('smile', ':D')
-
+  words = txt.split()
+  emoticon = {
+    "smile":":D",
+    "grin":":)",
+    "sad":":(",
+    "mad":":P"
+  }
+  outcome = ""
+  for word in words:
+    outcome += emoticon.get(word, word)+ " "
+  return outcome
 
 
 print(emotify("Make me smile"))
+print(emotify("Make me grin"))
+print(emotify("Make me sad"))
