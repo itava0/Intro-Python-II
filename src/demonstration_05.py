@@ -18,3 +18,9 @@ Notes:
 - Return the name of the data type as a lowercase string.
 """
 def data_type(value):
+  return type(value)
+
+
+print(data_type([1, 2, 3, 4]))
+print(data_type({'key': "value"}))
+print(data_type("This is an example string."))
