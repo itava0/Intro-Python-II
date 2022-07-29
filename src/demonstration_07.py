@@ -11,4 +11,16 @@ Examples:
 - repeat_it("cwAt") -> "C-Ww-Aaa-Tttt"
 """
 def repeat_it(input_str):
-    # Your code here
+ j = len(input_str)  
+ i=0
+ res=[]
+ while i<j :
+    res.append(input_str[i])
+    res.append(input_str[i] * i)
+    print(res)
+    i = i+1
+ result ="-".join(res)
+ return result
+
+
+print(repeat_it("abcd"))
